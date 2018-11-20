@@ -5,12 +5,9 @@
 
 ## install plugin
 ``` bash
-npm install vue-carplate
-```
-
-## install plugin
-``` bash
-npm install select-car-no
+npm install vue-carplate --save
+or
+yarn add vue-carplate
 ```
 
 ## import plugin
