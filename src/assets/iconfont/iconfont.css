@@ -1,0 +1,19 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1542684653704'); /* IE9*/
+  src: url('iconfont.eot?t=1542684653704#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAASYAAsAAAAABuQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFY8hEi7Y21hcAAAAYAAAABLAAABcOc2tdRnbHlmAAABzAAAAN8AAADwR9wKCGhlYWQAAAKsAAAAMQAAADYUxYXYaGhlYQAAAuAAAAAeAAAAJAlSBPVobXR4AAADAAAAAAgAAAAICXP//2xvY2EAAAMIAAAABgAAAAYAeAAAbWF4cAAAAxAAAAAgAAAAIAEPAFZuYW1lAAADMAAAAUUAAAJtPlT+fXBvc3QAAAR4AAAAHgAAAC/ahmpueJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk2cU4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDg843vGx9zwv4EhhrmRoQEozAiSAwAbvQy6eJxjYGBgZWBgYAZiHSBmYWBgDGFgZAABP6AoI1icmYELLM7CoARWwwISf8b3/z+MBPJZwCQDIxvDKOABkzJQHjisIJiBEQBLJgmhAHicJcyxTsMwFIVhH/s6HSKBIFYcSpQqRY1haRFUzUY6oFaVEFM7tkNfgIWNpQwsTDxB38gWL5QEpyy/dK+OPibatj3Id/HJLtmIrRiTuSkMimmJWZln0BdniMYwedBDoDTiAfInlKYXDCc4pZhWMF1mDwOUXWJ1Dh0rcvU9ja6bfZrimN7y38WO892d2Mzrt5t+85Uk+EiGxH/mG9EoCslZCmVEZC1RJEOyzj/V6T6A93HMXjMvgW+X9ctyKx6rNXDVfOtn7cOBdbX3c+eI/jlvRFJaK70ayo77A8geMxIAeJxjYGRgYADihTanT8fz23xl4GZhAIEbkgvewuj///83sJYwNwK5HAxMIFEAb7kNpAAAAHicY2BkYGBu+N/AEMNa/B8IWEsYgCIogAkAtLMHUAAABAAAAAVz//8AAAAAAHgAAAABAAAAAgBKAAMAAAAAAAIAAAAKAAoAAAD/AAAAAAAAeJxlj01OwzAQhV/6B6QSqqhgh+QFYgEo/RGrblhUavdddN+mTpsqiSPHrdQDcB6OwAk4AtyAO/BIJ5s2lsffvHljTwDc4Acejt8t95E9XDI7cg0XuBeuU38QbpBfhJto41W4Rf1N2MczpsJtdGF5g9e4YvaEd2EPHXwI13CNT+E69S/hBvlbuIk7/Aq30PHqwj7mXle4jUcv9sdWL5xeqeVBxaHJIpM5v4KZXu+Sha3S6pxrW8QmU4OgX0lTnWlb3VPs10PnIhVZk6oJqzpJjMqt2erQBRvn8lGvF4kehCblWGP+tsYCjnEFhSUOjDFCGGSIyujoO1Vm9K+xQ8Jee1Y9zed0WxTU/3OFAQL0z1xTurLSeTpPgT1fG1J1dCtuy56UNJFezUkSskJe1rZUQuoBNmVXjhF6XNGJPyhnSP8ACVpuyAAAAHicY2BigAAuBuyAiZGJkZmBtaQ0Mz2VgQEADVsCOQAA') format('woff'),
+  url('iconfont.ttf?t=1542684653704') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1542684653704#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tuige:before { content: "\e60e"; }
+
