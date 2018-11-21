@@ -1,11 +1,18 @@
 {
   "name": "vue-carplate",
-  "description": "vue中国车牌号录入组件, Chinese Car Plate Component For Vue",
-  "version": "1.0.3",
+  "description": "vue中国车牌号录入组件(移动端), Chinese Car Plate Component For Vue(mobile)",
+  "version": "1.0.4",
   "author": "yiliyili",
   "license": "MIT",
   "private": false,
   "main": "dist/car_plate.js",
+  "keywords": [
+      "vue",
+      "carno",
+      "carplate",
+      "vue-carplate",
+      "licence plate number"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/alvawu/vue-carplate.git"
