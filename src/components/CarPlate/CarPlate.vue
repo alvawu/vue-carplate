@@ -1,36 +1,41 @@
 <template>
-    <div>
-        <div @click.stop="show">{{displayValue}}</div>
-        <transition name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-        <div class="carno" v-if="shown" @click="cancel">
-            <ul>
-                <li class="carno_digit" v-for="(digit, i) in carnoArr" :class="{'current': current === i}" @click.stop="onClickDigit(i)" v-html="digit"></li>
-            </ul>
-            <div class="err" v-if="errMsg">{{errMsg}}</div>
-        </div>
-        </transition>
-        <transition name="custom-classes-transition" enter-active-class="animated slideInUp" leave-active-class="animated slideOutDown">
-        <div class="keyboard" v-if="shown">
-            <div class="header">
-                <span class="clearNo" @click="clear">清除</span>
-                <span class="confirm" @click="confirm">完成</span>
-            </div>
-            <div class="line" v-if="current === 0" :class="line.size" v-for="line in carTxt">
-                <div class="key" :class="{'delete': key === 'delete'}" v-for="key in line.name" @click="onClickKey(key, line.type)">
-                    <i class="iconfont icon-tuige" v-if="key === 'delete'"></i>
-                    <span v-else>{{key}}</span>
-                </div>
-            </div>
-            
-            <div class="line" v-if="current > 0" :class="line.size" v-for="line in numAlphaText">
-                <div class="key" :class="{'delete': key === 'delete', 'disabled': current === 1 && line.type === 'number'}" v-for="key in line.name" @click="onClickKey(key, line.type)">
-                    <i class="iconfont icon-tuige" v-if="key === 'delete'"></i>
-                    <span v-else>{{key}}</span>
-                </div>
-            </div>
-        </div>
-        </transition>
+<div>
+  <div @click.stop="show" :class="valueClass">{{displayValue}}</div>
+  <transition name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+    <div class="carno" v-if="shown" @click="cancel">
+      <ul>
+        <li class="carno_digit" v-for="(digit, i) in carnoArr" :class="{'current': current === i}" @click.stop="onClickDigit(i)"
+          v-html="digit"></li>
+      </ul>
+      <div class="err" v-if="errMsg">{{errMsg}}</div>
     </div>
+  </transition>
+  <transition name="custom-classes-transition" enter-active-class="animated slideInUp" leave-active-class="animated slideOutDown">
+    <div class="keyboard" v-if="shown">
+      <div style="position: relative">
+        <div class="header">
+          <span class="clearNo" @click="clear">清除</span>
+          <span class="confirm" @click="confirm">完成</span>
+        </div>
+        <div class="line" v-if="current === 0" :class="line.size" v-for="line in carTxt">
+          <div class="key" :class="{'delete': key === 'delete'}" v-for="key in line.name" @click="onClickKey(key, line.type)">
+            <i class="iconfont icon-tuige" v-if="key === 'delete'"></i>
+            <span v-else>{{key}}</span>
+          </div>
+        </div>
+
+        <div class="line" v-if="current > 0" :class="line.size" v-for="line in numAlphaText">
+          <div class="key" :class="{'delete': key === 'delete', 'disabled': current === 1 && line.type === 'number'}"
+            v-for="key in line.name" @click="onClickKey(key, line.type)">
+            <i class="iconfont icon-tuige" v-if="key === 'delete'"></i>
+            <span v-else>{{key}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
+
+</div>
 </template>
 
 <style src="../../assets/iconfont/iconfont.css" lang="css"></style>
@@ -79,7 +84,7 @@ ul {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100%;
+    height: 100.1%;
     padding-top: 30%;
     /* margin-left: -0.5rem; */
     text-align: center;
@@ -310,16 +315,23 @@ ul {
   -webkit-animation-name: slideOutDown;
   animation-name: slideOutDown;
 }
+
+.empty {
+    color: rgb(169, 169, 169)
+}
 </style>
 <script>
 import Vue from 'vue'
+// import { TransferDom } from 'vux'
 export default {
     name: 'car-plate',
-    directives: {},
+    // directives: {TransferDom},
+    components: {},
     data: function () {
         return {
             shown: false,
             current: 0,
+            valueClass: 'empty',
             carnoArr: ['&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;'],
             errMsg: '',
             carTxt: [{
@@ -381,8 +393,10 @@ export default {
                 }
             })
             if (disp.length >= 7) {
+                self.valueClass = ''
                 return disp.join('')
             } else {
+                self.valueClass = 'empty'
                 return '请点击录入车牌号'
             }
         }
@@ -390,6 +404,7 @@ export default {
     methods: {
         show: function () {
             let self = this
+            document.activeElement.blur()
             let valueArr = self.value.split('')
             for (let i = 0; i <= 7; i++) {
                 if (valueArr[i]) {
@@ -398,6 +413,8 @@ export default {
                     Vue.set(self.carnoArr, i, '&nbsp;')
                 }
             }
+            var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
+            window.scrollTo(0, scrollTop + 1)
             self.current = 0
             self.shown = true
         },

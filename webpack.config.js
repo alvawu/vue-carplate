@@ -1,6 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 const NODE_ENV = process.env.NODE_ENV;
+const vuxLoader = require('vux-loader')
 console.log("-----NODE_ENV===", NODE_ENV);
 
 module.exports = {
@@ -82,3 +83,8 @@ if (process.env.NODE_ENV === 'production') {
     })
   ])
 }
+
+
+module.exports = vuxLoader.merge(module.exports, {
+    plugins: ['vux-ui', 'progress-bar', 'duplicate-style']
+})

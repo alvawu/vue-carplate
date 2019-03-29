@@ -1,28 +1,32 @@
 {
   "name": "vue-carplate",
   "description": "vue中国车牌号录入组件(移动端), Chinese Car Plate Component For Vue(mobile)",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "author": "yiliyili",
   "license": "MIT",
   "private": false,
   "main": "dist/car_plate.js",
   "keywords": [
-      "vue",
-      "carno",
-      "carplate",
-      "vue-carplate",
-      "licence plate number"
+    "vue",
+    "carno",
+    "carplate",
+    "vue-carplate",
+    "licence plate number"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/alvawu/vue-carplate.git"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --host 0.0.0.0 --port 7011",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vue": "^2.5.11"
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "vue": "^2.5.11",
+    "vux": "^2.9.2",
+    "vux-loader": "^1.2.9"
   },
   "browserslist": [
     "> 1%",
