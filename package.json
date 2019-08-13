@@ -1,7 +1,7 @@
 {
   "name": "vue-carplate",
   "description": "vue中国车牌号录入组件(移动端), Chinese Car Plate Component For Vue(mobile)",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "yiliyili",
   "license": "MIT",
   "private": false,

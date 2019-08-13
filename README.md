@@ -1,6 +1,6 @@
 # vue-carplate
 
-> vue中国车牌号录入组件, Chinese Car Plate Component For Vue
+> vue中国车牌号录入组件(移动端only), Chinese Car Plate Component For Vue
 
 
 ## install plugin
